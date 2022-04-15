@@ -1,0 +1,51 @@
+<%-include('./partials/header')%>
+<%-include('./partials/navbar')%>
+<div class="container  px-3">
+  <h3 class="text-start">Dodaj Przepisy:</h3>
+  <form action="add" method="post">
+    <div class="row">
+      <div class="col-lg-6 mb-3">
+        <label for="title" class="form-label">Tytuł</label>
+        <input type="text" class="form-control" name="title" id="title" required>
+      </div>
+      <div class="col-lg-6 mb-3">
+        <label for="photo" class="form-label">Zdjęcie</label>
+        <input type="text" class="form-control" name="photo" id="photo" required>
+      </div>
+      <div class="col-lg-6 mb-3">
+        <label for="text" class="form-label">Opis</label>
+        <input type="text" class="form-control" name="text" id="text" required>
+      </div>
+      <div class="col-lg-6 mb-3">
+        <label for="prep" class="form-label">Czas przygotowania</label>
+        <input type="text" class="form-control" name="prep" id="prep" required>
+      </div>
+      <div class="col-lg-6 mb-3">
+        <label for="cook" class="form-label">Czas gotowania</label>
+        <input type="text" class="form-control" name="cook" id="cook" required>
+      </div>
+      <div class="col-lg-6 mb-3">
+        <label for="serving" class="form-label">Porcja</label>
+        <input type="text" class="form-control" name="serving" id="serving" required>
+      </div>
+      <div class="col-lg-6 mb-3">
+        <label for="instructions" class="form-label">Instrukcje</label>
+        <input type="text" class="form-control" name="instructions" id="instructions" required>
+      </div>
+      <div class="col-lg-6 mb-3">
+        <label for="ingredients" class="form-label">Składniki</label>
+        <input type="text" class="form-control" name="ingredients" id="ingredients" required>
+      </div>
+      <div class="col-lg-6 mb-3">
+        <label for="tools" class="form-label">Narzędzia</label>
+        <input type="text" class="form-control" name="tools" id="tools" required>
+      </div>
+      <div class="col-lg-6 mb-3">
+        <label for="species" class="form-label">Gatunek</label>
+        <input type="text" class="form-control" name="species" id="species" required>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Dodaj Przepis</button>
+  </form>
+</div>
+<%-include('./partials/footer')%>

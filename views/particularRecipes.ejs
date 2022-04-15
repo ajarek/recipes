@@ -1,0 +1,31 @@
+<%-include('./partials/header')%>
+<%-include('./partials/navbar')%>
+<div class="container_particular d-flex flex-column justify-content-center align-items-center px-5  ">
+    <div class="row">
+        <div class="col-lg-6 p-5 ">
+            <img src="<%=recipes.photo%>" class="card-img-top" alt="recipes">
+        </div>
+        <div class="col-lg-6 d-flex flex-column justify-content-evenly">
+            <h3 class="pt-4 text-center"><%=recipes.title%></></h3>
+            <p class="text-center"><%=recipes.text%></p>
+            <div class="row fs-5">
+                <div class="col-lg-4 text-center">⏲️🧑🏽‍🍳<br><%=recipes.prep%> min.</div>
+                <div class="col-lg-4 text-center">⏲️🫕<br><%=recipes.cook%> min.</div>
+                <div class="col-lg-4 text-center">👨‍👩‍👧‍👧<br><%=recipes.serving%> os.</div>
+            </div>
+        </div>
+        <div class="col-lg-6 text-start">
+            <h3 class=" ">Instrukcje</h3>
+            <p><%=recipes.instructions%></p>
+        </div>
+        <div class="col-lg-6 text-start">
+            <h3 class=" ">Składniki</h3>
+            <p><%=recipes.ingredients%></p>
+            <h3 class=" ">Narzędzia</h3>
+            <p><%=recipes.tools%></p>
+        </div>
+        <div class="col-lg-6"></div>
+    </div>
+</div>
+
+<%-include('./partials/footer')%>

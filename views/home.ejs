@@ -1,0 +1,67 @@
+<%-include('./partials/header')%>
+<%-include('./partials/navbar')%>
+<div class="container">
+    <div class="baner">
+        <h1>Po Prostu Przepisy</h1>
+        <p>Brak pudru, tylko przepisy!</p>
+    </div>
+    <div class="row w-100">
+        <div class="col-lg-3 ">
+            <ul class="list-group">
+                <li class="list-group-item  fs-4" aria-current="true">Przepisy <a id="add-recipe" href="add">➕</a></li>
+                <% let arr=[]%>
+                <% myhome.forEach(hm=>{%>
+                <% arr.push(hm.species)%>
+                <%})%>
+                <%uniqueChars=arr.filter((element, index) => arr.indexOf(element) === index)%>
+                <%uniqueChars.forEach((ch,inx)=>{%>
+                <li class="list-group-item"><a class=" li-a text-decoration-none text-secondary"
+                        href="#"><%=ch%><span></span></a></li>
+                <%})%>
+            </ul>
+        </div>
+        <div class="col-lg-9 ">
+            <div class="row">
+                <% myhome.forEach(hm=>{%>
+                <div class="col-lg-4" data-species="<%=hm.species%>">
+                    <div class="card" data-id="<%=hm._id%>">
+                        <img src="<%=hm.photo%>" class="card-img-top rounded" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title"><%=hm.title%></h5>
+                            <p class="card-text text-secondary">⏲️🧑🏽‍🍳:<%=hm.prep%> | ⏲️🫕:<%=hm.cook%>min</p>
+                        </div>
+                    </div>
+                </div>
+                <%})%>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    const myDiv = document.querySelectorAll('.card');
+    myDiv.forEach(div => {
+        div.addEventListener('click', () => {
+            const id = div.getAttribute('data-id');
+            window.location.href = `/home/${id}`;
+        })
+    })
+    
+    const inputSearch = document.querySelectorAll('.li-a')
+    inputSearch.forEach(li => {
+        li.addEventListener('click', filterSearch)
+    })
+
+    function filterSearch(e) {
+        const cards = document.querySelectorAll('.col-lg-4')
+        cards.forEach(card => {
+            if (card.dataset.species.toLowerCase().includes(e.target.innerText.toLowerCase())) {
+                card.style.display = 'flex'
+            } else {
+                card.style.display = 'none'
+            }
+        })
+    }
+</script>
+<%-include('./partials/footer')%>

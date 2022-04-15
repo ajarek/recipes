@@ -1,0 +1,35 @@
+<%-include('./partials/header')%>
+<%-include('./partials/navbar')%>
+<div class="container_particular d-flex flex-column justify-content-center align-items-center py-3  ">
+    <div class="row w-100 ">
+        <div class="col-lg-6 border h-100 d-flex flex-column justify-content-evenly p-5" >
+            <h3 class="pb-4">Chcesz skontaktować się z nami?</h3>
+            <p>Witaj w formularzu kontaktowym strony
+                "Po Prostu Przepisy".
+                Aby rozpocząć wypełnij formularz podając swoje dane:
+            imie i adres e-mail .Następnie napisz do nas wiadomość.
+            lub opinię. Każda sugestia przyczyni się do rozwoju strony.
+            Dziękujemy za zaufanie.
+            Wysyłająć wiadomość wyrażasz zgodę na przetwarzanie danych osobowych w celu przesłania odpowiedzi na twój adres e-mail podany w formularzu kontaktowym.
+         </p>
+        </div>
+        <div class="col-lg-6 border h-100 d-flex flex-column justify-content-evenly p-4">
+            <form class="px-4" autocomplete="off">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Twoje Imie</label>
+                    <input type="name" class="form-control" id="name" required>
+                  </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Adres Email</label>
+                  <input type="email" class="form-control" id="email" required >
+                </div>
+                <div class="mb-3">
+                  <label for="mesage" class="form-label">Napisz Wiadomość</label>
+                 <textarea name="mesage" id="" class="w-100" rows="3" required></textarea>
+                </div>                
+                <a type="submit" href="mailto:ajarek@poczta.onet.pl" class="btn btn-primary">Submit</a>
+              </form>
+        </div>
+    </div>
+</div>
+<%-include('./partials/footer')%>

@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+body{
+  background-color: white;
+  font-family: monospace;
+}
+.container{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+.navbar-brand{
+  text-shadow: 1px 1px 2px rgba(66, 68, 90, 1);
+  font-family: 'Secular One', sans-serif;
+}
+.navbar-nav .nav-item .nav-link{
+  color: black;
+}
+.navbar-nav .nav-item .nav-link:hover{
+  color: #0d6efd;
+}  
+.navbar-nav .nav-item .nav-link:focus{
+  color: #0d6efd;
+}
+
+.btn:hover{
+background-color: #37338c;
+}
+.baner{
+  width: 100%;
+  height: 240px;
+  color: black;
+  padding: 1rem;
+  text-align: center;
+  border:solid;
+  background: url('/images/main.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-bottom: 2rem; 
+}
+.baner::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+}
+.baner h1,.baner p{
+  font-size: 3.5rem;
+  color: white;
+  font-weight: 400;
+  letter-spacing: 1px;
+  z-index: 100;
+}
+.baner p{
+  font-size: 1.5rem;
+}
+li{
+  display: flex;
+}
+#add-recipe{
+  width: 40px;
+  height: 40px;
+  padding: 0.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #0d6efd;
+  border:none;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  transition: 0.3s;
+  margin-left: 1rem;
+}
+#add-recipe:hover{
+  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.3);
+  transform: scale(0.9);
+}
